@@ -1,107 +1,79 @@
-<!DOCTYPE html>
-<html><head>
-	<meta name="generator" content="Hugo 0.58.2" />
-  <title>
-      
-          yeehaw
-      
-  </title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Omer Abubaker" />
-  <link rel="shortcut icon" type="image/x-icon" href="https://omersayshi.github.io/img/giraffeca.png">
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-  
-  
-  
-  
-  
-  <link rel="stylesheet" href="https://omersayshi.github.io/style.min.a6cab246517742ad1189b209575fc61556550e663cdfe02a0aab0632b39e978b.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
 
-  
-  
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
 
-  <meta property="og:title" content="yeehaw" />
-<meta property="og:description" content="        Passionate developer. Amateur Photographer. Wannabe blogger.
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
-        Seeking Summer 2020 Internship!
-
-    " />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://omersayshi.github.io/" />
-
-<meta itemprop="name" content="yeehaw">
-<meta itemprop="description" content="        Passionate developer. Amateur Photographer. Wannabe blogger.
-
-        Seeking Summer 2020 Internship!
-
-    ">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="yeehaw"/>
-<meta name="twitter:description" content="        Passionate developer. Amateur Photographer. Wannabe blogger.
-
-        Seeking Summer 2020 Internship!
-
-    "/>
-
-  <!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-  <![endif]-->
-
-  <!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-  <![endif]-->
-
-  </head>
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
 <body>
-    <div id="profileContainer">
-      <div id="profile">
-        <header>
-          
-          <div class="avatar">
-            <img class="avatarMask" src="https://omersayshi.github.io/img/photo.png" alt="avatar">
-            <img src="https://omersayshi.github.io/img/avatar-border.svg" alt="avatar-border">
-          </div>
-          
-          <h1 class="author">Omer Abubaker</h1>
-        </header>
-        
-        <p>
-                  Passionate developer. Amateur Photographer. Wannabe blogger.
 
-        Seeking Summer 2020 Internship!
+<div class="bgimg">
+  <div class="topleft">
+  </div>
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+  <div class="bottomleft">
+  </div>
+</div>
 
-    
-        </p>
-        
-        <nav>
-          <ul>
-            
-            <li><a href="https://omersayshi.github.io/blog/" aria-label="blog"><i class='fas fa-blog fa-lg'></i><br></a></li>
-            
-            <li><a href="https://instagram.com/omersayshi" aria-label="instagram"><i class='fab fa-instagram fa-lg'></i><br></a></li>
-            
-            <li><a href="https://github.com/omersayshi" aria-label="github"><i class='fab fa-github fa-lg'></i><br></a></li>
-            
-            <li><a href="http://linkedin.com/in/omersayshi/" aria-label="linkedin"><i class='fab fa-linkedin fa-lg'></i><br></a></li>
-            
-            <li><a href="mailto:contact@omerabubaker.com" aria-label="email"><i class='fa fa-envelope fa-lg'></i><br></a></li>
-            
-            <li><a href="https://drive.google.com/file/d/1cLVu67mABZ3VDWy8sAp2LGNGr-JdtrVT/view" aria-label="resume"><i class='far fa-file fa-lg'></i><br></a></li>
-            
-          </ul>
-        </nav>
-      </div>
-    </div><footer>
-  <p>
-  &copy; 2019 <a href="https://youtu.be/dQw4w9WgXcQ">Omer Abubaker</a>.
-  Powered by <a href="https://gohugo.io/">Hugo</a>
-  
-  </p>
-</footer>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2020 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
 </body>
 </html>
